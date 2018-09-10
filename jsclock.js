@@ -9,15 +9,27 @@ var clock = {
     const seconds = now.getSeconds();
     const minutes = now.getMinutes();
     const hours = now.getHours();
+
     if(seconds == 59){
         secondHand.style.transition = "initial";
     }
-    if(minutes == 59){
-        secondHand.style.transition = "initial";
+    if(seconds == 1){
+        secondHand.style.transition = "all 0.5s";
     }
-    if(hours == 12){
-        secondHand.style.transition = "initial";
+    if(minutes == 60){
+        minHand.style.transition = "initial";
     }
+    if(minutes == 1){
+        minHand.style.transition = "all 0.5s";
+    }
+    
+    if(hours == 11){
+        hourHand.style.transition = "initial";
+    }
+    if(hours == 1){
+        hourHand.style.transition = "all 0.5s";
+    }
+
     const secondsDegrees = ((seconds / 60) * 360) + 90;
     const minutesDegrees = ((minutes/60)*360) + 90;
     const hoursDegrees = ((hours/12)*360) + 90;
