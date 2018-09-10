@@ -39,7 +39,3 @@ html{
 .min-hand{
     width: 35%;
 }
-
-.initial{
-    transition: initial;
-}
