@@ -16,7 +16,7 @@ var clock = {
     if(seconds == 1){
         secondHand.style.transition = "all 0.5s";
     }
-    if(minutes == 60){
+    if(minutes == 59){
         minHand.style.transition = "initial";
     }
     if(minutes == 1){
